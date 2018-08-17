@@ -1,0 +1,1 @@
+package com.liumapp.demo.rabbitmq.operator;
