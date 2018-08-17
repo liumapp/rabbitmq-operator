@@ -10,11 +10,11 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
 
 /**
- * @author liumapp
- * @file RabbitMQOperatorMain.java
- * @email liumapp.com@gmail.com
- * @homepage http://www.liumapp.com
- * @date 2018/8/17
+ * author liumapp
+ * file RabbitMQOperatorMain.java
+ * email liumapp.com@gmail.com
+ * homepage http://www.liumapp.com
+ * date 2018/8/17
  */
 @EnableAutoConfiguration
 @Configuration

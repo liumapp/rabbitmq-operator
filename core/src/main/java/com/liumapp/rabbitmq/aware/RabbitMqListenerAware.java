@@ -18,11 +18,11 @@ import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
 /**
- * @author liumapp
- * @file RabbitMqListenerAware.java
- * @email liumapp.com@gmail.com
- * @homepage http://www.liumapp.com
- * @date 2018/8/17
+ * author liumapp
+ * file RabbitMqListenerAware.java
+ * email liumapp.com@gmail.com
+ * homepage http://www.liumapp.com
+ * date 2018/8/17
  */
 @Component
 public class RabbitMqListenerAware implements ChannelAwareMessageListener, ApplicationContextAware {

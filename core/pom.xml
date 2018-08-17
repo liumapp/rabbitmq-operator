@@ -24,6 +24,7 @@
 
   <name>rabbitmq-operator</name>
   <url>http://maven.apache.org</url>
+  <description>a spring boot rabbitmq operator</description>
 
   <dependencies>
     <dependency>
@@ -64,7 +65,7 @@
             <manifest>
               <addClasspath>true</addClasspath>
               <classpathPrefix>./</classpathPrefix>
-              <mainClass>com.liumapp.rabbitmq.operator.RedisOperatorMain</mainClass>
+              <mainClass>com.liumapp.rabbitmq.operator.RabbitMQOperatorMain</mainClass>
             </manifest>
           </archive>
         </configuration>
@@ -127,7 +128,7 @@
       <name>GNU General Public License v3.0</name>
       <url>http://www.gnu.org/licenses/agpl-3.0.html</url>
       <distribution>repo</distribution>
-      <comments>redis operator</comments>
+      <comments>rabbitmq-operator</comments>
     </license>
   </licenses>
 

@@ -15,11 +15,11 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 /**
- * @author liumapp
- * @file RabbitMqOperatorConfig.java
- * @email liumapp.com@gmail.com
- * @homepage http://www.liumapp.com
- * @date 2018/8/17
+ * author liumapp
+ * file RabbitMqOperatorConfig.java
+ * email liumapp.com@gmail.com
+ * homepage http://www.liumapp.com
+ * date 2018/8/17
  */
 @Configuration
 public class RabbitMqOperatorConfig {

@@ -14,11 +14,11 @@ import java.util.Date;
 import java.util.UUID;
 
 /**
- * @author liumapp
- * @file BasicPublisher.java
- * @email liumapp.com@gmail.com
- * @homepage http://www.liumapp.com
- * @date 2018/8/17
+ * author liumapp
+ * file BasicPublisher.java
+ * email liumapp.com@gmail.com
+ * homepage http://www.liumapp.com
+ * date 2018/8/17
  */
 public abstract class BasicPublisher implements RabbitTemplate.ConfirmCallback, RabbitTemplate.ReturnCallback {
 

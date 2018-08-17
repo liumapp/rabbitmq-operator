@@ -6,11 +6,11 @@ import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
 /**
- * @author liumapp
- * @file HelloWorldConsumer.java
- * @email liumapp.com@gmail.com
- * @homepage http://www.liumapp.com
- * @date 2018/8/17
+ * author liumapp
+ * file HelloWorldConsumer.java
+ * email liumapp.com@gmail.com
+ * homepage http://www.liumapp.com
+ * date 2018/8/17
  */
 @Service
 public class HelloWorldConsumer {
