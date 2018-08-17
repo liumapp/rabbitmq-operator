@@ -4,7 +4,7 @@
 
   <groupId>com.liumapp.rabbitmq</groupId>
   <artifactId>rabbitmq-operator</artifactId>
-  <version>v1.0.0</version>
+  <version>v1.0.5</version>
   <packaging>jar</packaging>
 
   <properties>
@@ -65,7 +65,7 @@
             <manifest>
               <addClasspath>true</addClasspath>
               <classpathPrefix>./</classpathPrefix>
-              <mainClass>com.liumapp.rabbitmq.operator.RabbitMQOperatorMain</mainClass>
+              <mainClass>com.liumapp.rabbitmq.RabbitMQOperatorMain</mainClass>
             </manifest>
           </archive>
         </configuration>
