@@ -2,6 +2,7 @@ package com.liumapp.rabbitmq.config;
 
 import com.liumapp.rabbitmq.aware.RabbitMqListenerAware;
 import org.springframework.amqp.core.*;
+import org.springframework.amqp.rabbit.connection.CachingConnectionFactory;
 import org.springframework.amqp.rabbit.connection.ConnectionFactory;
 import org.springframework.amqp.rabbit.connection.SimpleRoutingConnectionFactory;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
@@ -45,11 +46,6 @@ public class RabbitMqOperatorConfig {
     @Bean
     public RabbitMqListenerAware rabbitMqListenerAware () {
         return new RabbitMqListenerAware();
-    }
-
-    @Bean
-    public ConnectionFactory connectionFactory () {
-        return new SimpleRoutingConnectionFactory();
     }
 
     @Bean

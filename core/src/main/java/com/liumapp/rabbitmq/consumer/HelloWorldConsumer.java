@@ -17,10 +17,9 @@ public class HelloWorldConsumer {
 
     private Logger logger = LoggerFactory.getLogger(this.getClass());
 
-    public HelloWorldPattern handle (HelloWorldPattern helloWorldPattern) {
+    public void handle (HelloWorldPattern helloWorldPattern) {
         logger.info("test consumer service get pattern : " + helloWorldPattern.toString());
-        helloWorldPattern.setMsg("service get job done");
-        return helloWorldPattern;
+        // and do something you like
     }
 
 }

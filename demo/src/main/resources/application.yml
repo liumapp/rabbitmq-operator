@@ -9,5 +9,6 @@ spring:
     #custom的值您可以自定义设置
     custom:
       appid: 9A064E7A180BB4790F827F546F699BB3
-      exchange: synch-exchange
-      routingkey: synch-routing
+      exchange: rabbitmq-operator
+      routingkey: rabbitmq-operator
+      queue: rabbitmq-operator
