@@ -1,8 +1,12 @@
 package com.liumapp.rabbitmq.publisher.service;
 
+import com.liumapp.rabbitmq.pattern.HelloWorldPattern;
 import com.liumapp.rabbitmq.publisher.BasicPublisher;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.amqp.core.Message;
 import org.springframework.amqp.rabbit.support.CorrelationData;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 /**
@@ -15,23 +19,33 @@ import org.springframework.stereotype.Service;
 @Service
 public class HelloWorldPublisher extends BasicPublisher {
 
-    @Override
-    public void sendMessage(String serviceName, String serviceMethodName, String correlationId, Object request) {
-        super.sendMessage(serviceName, serviceMethodName, correlationId, request);
+    private Logger logger = LoggerFactory.getLogger(this.getClass());
+
+    @Autowired
+    private HelloWorldPattern helloWorldPattern;
+
+    public void send () {
+        helloWorldPattern.setName("liumapp");
+        helloWorldPattern.setAge(24);
+        helloWorldPattern.setSex("boy");
+        helloWorldPattern.setMsg("send msg to do something");
+        logger.info("sender: " + helloWorldPattern.toString());
+        this.sendMessage("helloWorldConsumer", "handle", Integer.toString(10000), helloWorldPattern);
     }
 
     @Override
     public void confirm(CorrelationData correlationData, boolean ack, String cause) {
-
-    }
-
-    @Override
-    public void returnedMessage(Message message, int i, String s, String s1, String s2) {
-        super.returnedMessage(message, i, s, s1, s2);
+        logger.info("test publisher get confirmed info : " + correlationData);
+        if (ack) {
+            logger.info("send msg success");
+        } else {
+            logger.error("send msg failed and the reason is : " + cause);
+        }
     }
 
     @Override
     public void setCallBack() {
-
+        rabbitTemplate.setReturnCallback(this);
+        rabbitTemplate.setConfirmCallback(this);
     }
 }
