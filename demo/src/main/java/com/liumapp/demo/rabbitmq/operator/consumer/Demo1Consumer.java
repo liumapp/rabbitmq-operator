@@ -11,4 +11,5 @@ package com.liumapp.demo.rabbitmq.operator.consumer;
 public class Demo1Consumer {
 
 
+
 }

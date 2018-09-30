@@ -16,7 +16,7 @@ import org.springframework.context.annotation.Import;
 @EnableAutoConfiguration
 @Configuration
 @Import(RabbitMqOperatorConfig.class)
-@ComponentScan("com.liumapp.rabbitmq")
+@ComponentScan(basePackages = "com.liumapp.rabbitmq")
 public class RabbitMQOperatorMain {
 
 }
