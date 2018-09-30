@@ -10,7 +10,7 @@
 
   <groupId>com.liumapp.demo.rabbitmq.operator</groupId>
   <artifactId>demo</artifactId>
-  <version>v1.0.0</version>
+  <version>v2.0.0</version>
   <packaging>jar</packaging>
 
   <properties>
@@ -37,7 +37,7 @@
     <dependency>
       <groupId>com.liumapp.rabbitmq</groupId>
       <artifactId>rabbitmq-operator</artifactId>
-      <version>v1.1.0</version>
+      <version>v2.0.0</version>
     </dependency>
   </dependencies>
 
