@@ -26,15 +26,6 @@ public class HelloWorldPublisher extends BasicPublisher {
     @Autowired
     private HelloWorldPattern helloWorldPattern;
 
-    public void send () {
-        helloWorldPattern.setName("liumapp");
-        helloWorldPattern.setAge(24);
-        helloWorldPattern.setSex("boy");
-        helloWorldPattern.setMsg("send msg to do something");
-        logger.info("sender: " + helloWorldPattern.toString());
-        this.sendMessage("helloWorldConsumer", "handle", Integer.toString(10000), helloWorldPattern);
-    }
-
     @Override
     public void confirm(CorrelationData correlationData, boolean ack, String cause) {
         logger.info("test publisher get confirmed info : " + correlationData);
@@ -49,5 +40,15 @@ public class HelloWorldPublisher extends BasicPublisher {
     public void setCallBack() {
         rabbitTemplate.setReturnCallback(this);
         rabbitTemplate.setConfirmCallback(this);
+    }
+
+    @Override
+    public void send() {
+        helloWorldPattern.setName("liumapp");
+        helloWorldPattern.setAge(24);
+        helloWorldPattern.setSex("boy");
+        helloWorldPattern.setMsg("send msg to do something");
+        logger.info("sender: " + helloWorldPattern.toString());
+        this.sendMessage("helloWorldConsumer", "handle", Integer.toString(10000), helloWorldPattern);
     }
 }

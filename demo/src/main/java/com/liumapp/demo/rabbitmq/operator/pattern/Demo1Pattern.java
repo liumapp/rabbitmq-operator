@@ -13,6 +13,21 @@ import org.springframework.stereotype.Component;
 @Component
 public class Demo1Pattern {
 
+    private String msg;
 
+    public Demo1Pattern() {
+    }
 
+    public Demo1Pattern(String msg) {
+        this.msg = msg;
+    }
+
+    public String getMsg() {
+        return msg;
+    }
+
+    public Demo1Pattern setMsg(String msg) {
+        this.msg = msg;
+        return this;
+    }
 }

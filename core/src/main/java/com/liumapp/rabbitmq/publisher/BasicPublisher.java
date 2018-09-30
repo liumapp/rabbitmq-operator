@@ -67,4 +67,10 @@ public abstract class BasicPublisher implements RabbitTemplate.ConfirmCallback, 
      * 不然会触发InvocationTargetException
      */
     public abstract void setCallBack ();
+
+    /**
+     * send方法必须在子类中实现
+     * 用于实现具体的发消息任务
+     */
+    public abstract void send ();
 }
