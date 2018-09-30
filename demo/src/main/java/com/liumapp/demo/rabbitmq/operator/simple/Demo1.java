@@ -1,5 +1,6 @@
 package com.liumapp.demo.rabbitmq.operator.simple;
 
+import com.liumapp.demo.rabbitmq.operator.publisher.Demo1Publisher;
 import com.liumapp.rabbitmq.publisher.service.HelloWorldPublisher;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -24,7 +25,7 @@ public class Demo1 {
     private Logger logger = LoggerFactory.getLogger(this.getClass());
 
     @Resource
-    private HelloWorldPublisher helloWorldPublisher;
+    private Demo1Publisher demo1Publisher;
 
     /**
      * on prod model
@@ -33,7 +34,7 @@ public class Demo1 {
     @Scheduled(fixedDelay = 3000)
     public void send () {
         logger.info("test begin ");
-        helloWorldPublisher.send();
+        demo1Publisher.send();
     }
 
 
