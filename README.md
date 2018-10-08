@@ -9,7 +9,9 @@ Operating RabbitMQ in Spring Boot .
           <groupId>com.liumapp.rabbitmq</groupId>
           <artifactId>rabbitmq-operator</artifactId>
           <version>v1.0.0</version>
-        </dependency> 
+        </dependency>
+        
+  如果您的项目所用SpringBoot为1.x系列，请使用v1.0.0版本，如果您的项目所用SpringBoot为2.x系列，请使用v2.0.0版本       
 
 * 在SpringBoot的启动类添加以下注解:
 
