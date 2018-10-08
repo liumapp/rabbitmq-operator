@@ -43,7 +43,7 @@ public class HelloWorldPublisher extends BasicPublisher {
     }
 
     @Override
-    public void send() {
+    public void send(String msg) {
         helloWorldPattern.setName("liumapp");
         helloWorldPattern.setAge(24);
         helloWorldPattern.setSex("boy");
@@ -51,4 +51,5 @@ public class HelloWorldPublisher extends BasicPublisher {
         logger.info("sender: " + helloWorldPattern.toString());
         this.sendMessage("helloWorldConsumer", "handle", Integer.toString(10000), helloWorldPattern);
     }
+
 }

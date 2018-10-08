@@ -33,7 +33,7 @@ public class SendTest {
     @Scheduled(fixedDelay = 3000)
     public void send () {
         logger.info("test begin ");
-        helloWorldPublisher.send();
+        helloWorldPublisher.send("");
     }
 
 }

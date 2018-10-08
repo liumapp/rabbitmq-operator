@@ -25,13 +25,6 @@ public class Demo1Publisher extends BasicPublisher {
     private Demo1Pattern demo1Pattern;
 
     @Override
-    public void send () {
-        demo1Pattern.setMsg("this is demo1 publisher");
-        logger.info("demo1 publisher send msg : " + demo1Pattern.getMsg());
-        this.sendMessage("demo1Consumer", "handle", Integer.toString(10001), demo1Pattern);
-    }
-
-    @Override
     public void confirm(CorrelationData correlationData, boolean ack, String cause) {
         logger.info("demo1 publisher get confirmed info : " + correlationData);
         if (ack) {
@@ -45,5 +38,12 @@ public class Demo1Publisher extends BasicPublisher {
     public void setCallBack() {
         rabbitTemplate.setReturnCallback(this);
         rabbitTemplate.setConfirmCallback(this);
+    }
+
+    @Override
+    public void send(String msg) {
+        demo1Pattern.setMsg("this is demo1 publisher");
+        logger.info("demo1 publisher send msg : " + demo1Pattern.getMsg());
+        this.sendMessage("demo1Consumer", "handle", Integer.toString(10001), demo1Pattern);
     }
 }
