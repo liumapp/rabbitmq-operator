@@ -42,8 +42,11 @@ public class Demo1Publisher extends BasicPublisher {
 
     @Override
     public void send(String msg) {
-        demo1Pattern.setMsg("this is demo1 publisher");
+        demo1Pattern.setMsg(msg);
         logger.info("demo1 publisher send msg : " + demo1Pattern.getMsg());
-        this.sendMessage("demo1Consumer", "handle", Integer.toString(10001), demo1Pattern);
+        this.sendMessage("demo1Consumer", "handle2", Integer.toString(10001), demo1Pattern);
     }
 }
+
+
+

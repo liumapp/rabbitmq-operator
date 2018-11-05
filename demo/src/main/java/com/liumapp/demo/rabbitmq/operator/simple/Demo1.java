@@ -34,7 +34,7 @@ public class Demo1 {
     @Scheduled(fixedDelay = 3000)
     public void send () {
         logger.info("test begin ");
-        demo1Publisher.send("");
+        demo1Publisher.send("hello every body");
     }
 
 

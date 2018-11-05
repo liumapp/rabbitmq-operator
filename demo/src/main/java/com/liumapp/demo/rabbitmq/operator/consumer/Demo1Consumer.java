@@ -22,4 +22,8 @@ public class Demo1Consumer {
         logger.info("demo1 consumer service get pattern : " + demo1Pattern.toString());
     }
 
+    public void handle2 (Demo1Pattern demo1Pattern) {
+        logger.info("demo1 consumer handle2 service get pattern : " + demo1Pattern.getMsg());
+    }
+
 }
