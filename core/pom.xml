@@ -4,7 +4,7 @@
 
   <groupId>com.liumapp.rabbitmq</groupId>
   <artifactId>rabbitmq-operator</artifactId>
-  <version>v1.1.0</version>
+  <version>v1.1.5</version>
   <packaging>jar</packaging>
 
   <properties>
@@ -68,20 +68,20 @@
           <autoReleaseAfterClose>true</autoReleaseAfterClose>
         </configuration>
       </plugin>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-gpg-plugin</artifactId>
-        <version>1.6</version>
-        <executions>
-          <execution>
-            <id>sign-artifacts</id>
-            <phase>verify</phase>
-            <goals>
-              <goal>sign</goal>
-            </goals>
-          </execution>
-        </executions>
-      </plugin>
+      <!--<plugin>-->
+        <!--<groupId>org.apache.maven.plugins</groupId>-->
+        <!--<artifactId>maven-gpg-plugin</artifactId>-->
+        <!--<version>1.6</version>-->
+        <!--<executions>-->
+          <!--<execution>-->
+            <!--<id>sign-artifacts</id>-->
+            <!--<phase>verify</phase>-->
+            <!--<goals>-->
+              <!--<goal>sign</goal>-->
+            <!--</goals>-->
+          <!--</execution>-->
+        <!--</executions>-->
+      <!--</plugin>-->
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-javadoc-plugin</artifactId>

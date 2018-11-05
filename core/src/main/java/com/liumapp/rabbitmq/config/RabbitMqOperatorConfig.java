@@ -71,7 +71,7 @@ public class RabbitMqOperatorConfig {
         container.setMaxConcurrentConsumers(10);
         container.setConcurrentConsumers(5);
         container.setPrefetchCount(1000);
-        container.setAcknowledgeMode(AcknowledgeMode.MANUAL);
+        container.setAcknowledgeMode(AcknowledgeMode.NONE);
         container.setMessageListener(messageListenerAdapter);
         return container;
     }
